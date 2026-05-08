@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robot Setup</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="setup">
+  <main class="setup-shell">
+    <header class="setup-header">
+      <h1>Robot Setup</h1>
+      <a href="/robot-display">Display</a>
+    </header>
+
+    <section class="setup-panel">
+      <h2>Telepresence</h2>
+      <dl id="telepresenceStatus" class="setup-status"></dl>
+    </section>
+
+    <section class="setup-panel">
+      <h2>Idle Assistant</h2>
+      <dl id="assistantStatus" class="setup-status"></dl>
+      <div class="setup-actions">
+        <button id="setupAssistantToggle" type="button">AI</button>
+      </div>
+    </section>
+  </main>
+  <script src="/static/setup.js"></script>
+</body>
+</html>

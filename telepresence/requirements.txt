@@ -1,0 +1,6 @@
+aiohttp
+aiortc
+av
+opencv-python
+pyserial
+numpy

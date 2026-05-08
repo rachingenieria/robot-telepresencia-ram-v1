@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Robot Telepresence
+Comment=Launch the telepresence server
+Exec=/home/jetson/robot/telepresence/start_telepresence_desktop.sh
+Path=/home/jetson/robot/telepresence
+Terminal=true
+Categories=Utility;

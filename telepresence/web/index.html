@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Robot Telepresence</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="operator">
+  <main class="app-shell">
+    <section class="toolbar">
+      <button id="connectBtn">Connect</button>
+      <button id="disconnectBtn" disabled>Disconnect</button>
+      <button id="stopBtn" disabled>Stop</button>
+      <button id="centerHeadBtn" disabled>Center Head</button>
+      <button id="swapCamerasBtn">Swap Cameras</button>
+      <span id="statusText">Idle</span>
+    </section>
+
+    <section class="video-stage">
+      <div class="video-card front-card">
+        <header>Front</header>
+        <video id="frontVideo" autoplay playsinline></video>
+      </div>
+
+      <div class="video-card down-card">
+        <header>Down</header>
+        <video id="downVideo" autoplay playsinline></video>
+      </div>
+
+      <div class="overlay-controls">
+        <div class="pad-card drive-overlay">
+          <div id="drivePad" class="touch-pad compact-pad">
+            <div class="pad-cross"></div>
+            <div id="driveKnob" class="pad-knob"></div>
+          </div>
+        </div>
+        <div class="pad-card head-overlay">
+          <div id="headPad" class="touch-pad compact-pad">
+            <div class="pad-cross"></div>
+            <div id="headKnob" class="pad-knob"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="localPreviewCard" class="video-card local-preview hidden">
+      <header>Phone</header>
+      <video id="localVideo" autoplay playsinline muted></video>
+    </section>
+    <audio id="robotAudio" autoplay playsinline></audio>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

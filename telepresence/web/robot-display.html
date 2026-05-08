@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robot Display</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="display">
+  <main class="display-shell">
+    <section class="avatar-stage" aria-label="Operator voice avatar">
+      <div class="ai-bot">
+        <div class="head">
+          <div class="face">
+            <div class="avatar-brows">
+              <span class="brow"></span>
+              <span class="brow"></span>
+            </div>
+            <div class="avatar-eyes eyes">
+              <span class="eye"></span>
+              <span class="eye"></span>
+            </div>
+            <div class="avatar-nose"></div>
+            <div id="avatarMouth" class="avatar-mouth mouth"></div>
+          </div>
+        </div>
+      </div>
+      <div id="assistantResponseWrap" class="assistant-display-response hidden" aria-live="polite">
+        <p id="assistantResponseText" class="assistant-display-response-text">Sin respuesta.</p>
+      </div>
+      <canvas id="voiceCanvas" class="voice-canvas" width="900" height="420"></canvas>
+    </section>
+    <nav class="display-actions" aria-label="Robot display actions">
+      <button id="assistantToggleBtn" class="display-action" type="button">AI</button>
+      <a class="display-action" href="/setup">Setup</a>
+    </nav>
+    <aside class="assistant-panel" aria-live="polite">
+      <div class="assistant-panel-row">
+        <span>IA</span>
+        <strong id="assistantStateText">No disponible</strong>
+      </div>
+      <div class="assistant-panel-row">
+        <span>Escucha</span>
+        <strong id="assistantListenText">Inactiva</strong>
+      </div>
+      <p id="assistantHeardText" class="assistant-heard">Sin texto capturado.</p>
+    </aside>
+    <audio id="callerAudio" autoplay playsinline></audio>
+    <div id="displayStatus" class="display-status">Waiting for operator...</div>
+  </main>
+  <script src="/static/robot-display.js"></script>
+</body>
+</html>

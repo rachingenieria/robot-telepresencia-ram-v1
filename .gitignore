@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# Secrets
+be-more-agent/.env
+telepresence/.env
+
+# Runtime / temp
+*.log
+*.tmp
+*.swp
+*.swo
+/tmp/
+
+# Captures and generated media
+*.wav
+*.mp3
+/foto0.jpg
+/foto1.jpg
+/be-more-agent/current_image.jpg
+/be-more-agent/input.wav
+
+# Python cache folders
+.pytest_cache/
+.mypy_cache/
+
+# Telepresence certs and local TLS material
+telepresence/certs/*.pem
+telepresence/certs/*.crt
+telepresence/certs/*.key
+
+# Local build outputs
+be-more-agent/whisper.cpp/build/
+be-more-agent/piper/
+
+# Keep robot state/history local if desired
+be-more-agent/memory.json
